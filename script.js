@@ -64,3 +64,8 @@ paperBtn.addEventListener("click", () => {
 scissorsBtn.addEventListener("click", () => {
     showResults("Scissors");
 });
+
+
+const winnerMsgElement = document.getElementById("winner-msg");
+const optionsContainer = document.querySelector(".options-container");
+const resetGameBtn = document.getElementById("reset-game-btn");
