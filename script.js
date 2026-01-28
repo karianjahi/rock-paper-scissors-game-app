@@ -51,6 +51,16 @@ function showResults(userOption) {
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
 const scissorsBtn = document.getElementById("scissors-btn");
-rockBtn.addEventListener("click", () => {
 
+// Event listeners
+rockBtn.addEventListener("click", () => {
+    showResults("Rock");
+});
+
+paperBtn.addEventListener("click", () => {
+    showResults("Paper");
+});
+
+scissorsBtn.addEventListener("click", () => {
+    showResults("Scissors");
 });
