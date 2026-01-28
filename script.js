@@ -8,3 +8,23 @@ const getRandomComputerResult = () => {
      return options[random];
 };
 
+
+const hasPlayerWonTheRound = (playerChoice, computerChoice) => {
+    if (playerChoice === "Rock" && computerChoice === "Scissors") return true;
+    if (playerChoice === "Scissors" && computerChoice === "Paper") return true;
+    if (playerChoice === "Paper" && computerChoice === "Rock") return true;
+    return false;
+};
+
+// let pl = getRandomComputerResult();
+// let co = getRandomComputerResult();
+// verdict = hasPlayerWonTheRound(pl, co);
+// let result;
+// if (verdict) {
+//     result = 'Player has won';
+// } else {
+//     result = 'Player has lost';
+// }
+
+// console.log(`Player chose ${pl} and Computer chose ${co}: ${result}`);
+
