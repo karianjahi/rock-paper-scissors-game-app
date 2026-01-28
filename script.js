@@ -42,3 +42,8 @@ const computerScoreSpanElement = document.getElementById("computer-score");
 const roundResultsMsg = document.getElementById("results-msg");
 
 
+function showResults(userOption) {
+    roundResultsMsg.textContent = getRoundResults(userOption);
+    playerScoreSpanElement.textContent = playerScore;
+    computerScoreSpanElement.textContent = computerScore;
+};
