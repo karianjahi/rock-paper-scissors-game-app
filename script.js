@@ -47,3 +47,10 @@ function showResults(userOption) {
     playerScoreSpanElement.textContent = playerScore;
     computerScoreSpanElement.textContent = computerScore;
 };
+
+const rockBtn = document.getElementById("rock-btn");
+const paperBtn = document.getElementById("paper-btn");
+const scissorsBtn = document.getElementById("scissors-btn");
+rockBtn.addEventListener("click", () => {
+
+});
