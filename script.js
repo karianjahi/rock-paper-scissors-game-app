@@ -50,13 +50,14 @@ function showResults(userOption) {
     roundResultsMsg.textContent = getRoundResults(userOption);
     playerScoreSpanElement.textContent = playerScore;
     computerScoreSpanElement.textContent = computerScore;
-    if (playerScore === 3) winnerMsgElement.textContent = "Player has won the game!"
-    if (computerScore == 3) return winnerMsgElement.textContent = "Computer has won the game!"
     if (playerScore == 3 || computerScore == 3) {
         resetGameBtn.style.display = "block";
         optionsContainer.style.display = "none";
     }
+    if (playerScore === 3) return winnerMsgElement.textContent = "Player has won the game!"
+    if (computerScore == 3) return winnerMsgElement.textContent = "Computer has won the game!"
 };
+
 
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
@@ -75,5 +76,20 @@ scissorsBtn.addEventListener("click", () => {
     showResults("Scissors");
 });
 
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreSpanElement.textContent = playerScore;
+    computerScoreSpanElement.textContent = computerScore;
+    winnerMsgElement.textContent = "";
+    resetGameBtn.style.display = "none";
+    optionsContainer.style.display = "block";
+
+}
+
+resetGameBtn.addEventListener("click", () => {
+    resetGame();
+});
 
 
