@@ -4,7 +4,6 @@ const getRandomComputerResult = () => {
      const min = 0;
      const max = 2;
      const random = Math.floor(Math.random() * (max - min + 1));
-    //  console.log(typeof array[random]);
      return options[random];
 };
 
@@ -16,17 +15,7 @@ const hasPlayerWonTheRound = (playerChoice, computerChoice) => {
     return false;
 };
 
-// let pl = getRandomComputerResult();
-// let co = getRandomComputerResult();
-// verdict = hasPlayerWonTheRound(pl, co);
-// let result;
-// if (verdict) {
-//     result = 'Player has won';
-// } else {
-//     result = 'Player has lost';
-// }
 
-// console.log(`Player chose ${pl} and Computer chose ${co}: ${result}`);
 
 
 let playerScore = 0;
@@ -47,4 +36,9 @@ function getRoundResults(userOption) {
 
 };
 
-console.log(getRoundResults(getRandomComputerResult()));
+
+const playerScoreSpanElement = document.getElementById("player-score");
+const computerScoreSpanElement = document.getElementById("computer-score");
+const roundResultsMsg = document.getElementById("results-msg");
+
+
