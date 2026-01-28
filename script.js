@@ -85,11 +85,10 @@ function resetGame() {
     winnerMsgElement.textContent = "";
     resetGameBtn.style.display = "none";
     optionsContainer.style.display = "block";
+    roundResultsMsg.textContent = "";
 
 }
 
-resetGameBtn.addEventListener("click", () => {
-    resetGame();
-});
+resetGameBtn.addEventListener("click", resetGame);
 
 
