@@ -42,10 +42,20 @@ const computerScoreSpanElement = document.getElementById("computer-score");
 const roundResultsMsg = document.getElementById("results-msg");
 
 
+const winnerMsgElement = document.getElementById("winner-msg");
+const optionsContainer = document.querySelector(".options-container");
+const resetGameBtn = document.getElementById("reset-game-btn");
+
 function showResults(userOption) {
     roundResultsMsg.textContent = getRoundResults(userOption);
     playerScoreSpanElement.textContent = playerScore;
     computerScoreSpanElement.textContent = computerScore;
+    if (playerScore === 3) winnerMsgElement.textContent = "Player has won the game!"
+    if (computerScore == 3) return winnerMsgElement.textContent = "Computer has won the game!"
+    if (playerScore == 3 || computerScore == 3) {
+        resetGameBtn.style.display = "block";
+        optionsContainer.style.display = "none";
+    }
 };
 
 const rockBtn = document.getElementById("rock-btn");
@@ -66,6 +76,4 @@ scissorsBtn.addEventListener("click", () => {
 });
 
 
-const winnerMsgElement = document.getElementById("winner-msg");
-const optionsContainer = document.querySelector(".options-container");
-const resetGameBtn = document.getElementById("reset-game-btn");
+
