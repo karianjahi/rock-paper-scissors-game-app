@@ -28,3 +28,23 @@ const hasPlayerWonTheRound = (playerChoice, computerChoice) => {
 
 // console.log(`Player chose ${pl} and Computer chose ${co}: ${result}`);
 
+
+let playerScore = 0;
+let computerScore = 0;
+
+
+function getRoundResults(userOption) {
+    const computerResult = getRandomComputerResult();
+    if (userOption === computerResult) {
+        return `It's a tie! Both chose ${userOption}`
+    } else if (hasPlayerWonTheRound(userOption, computerResult)) {
+        playerScore += 1;
+        return `Player wins! ${userOption} beats ${computerResult}`;
+    } else {
+        computerScore += 1;
+        return `Computer wins! ${computerResult} beats ${userOption}`;
+    }
+
+};
+
+console.log(getRoundResults(getRandomComputerResult()));
